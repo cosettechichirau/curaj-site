@@ -11,6 +11,7 @@ apare pe site în 1–2 minute.
 | --- | --- |
 | `index.html` | Pagina principală: formular de înscriere, „Noul pact”, cele 5 priorități, echipa, valorile |
 | `echilibru-stat-privat.html` … `renastem-patriotismul-romanesc.html` | Cele 5 pagini de prioritate (butoanele „Mai multe”) |
+| `cosette-chichirau.html` … `silviu-ispas.html` | Paginile celor 7 membri ai echipei (fotografie, rol, biografie) |
 | `statut.html` | Statutul partidului, 18 capitole, cu buton de descărcare PDF |
 | `contact.html` | Formular de contact |
 | `assets/style.css` | Tot stilul site-ului; culorile sunt definite la începutul fișierului |
