@@ -5,7 +5,7 @@ cd "$(dirname "$0")/.."
 fail=0
 err() { echo "FAIL: $*"; fail=1; }
 
-PAGES="index.html statut.html contact.html echilibru-stat-privat.html viitor-copii-tineri.html respectam-femeile.html siguranta-zilei-de-maine.html renastem-patriotismul-romanesc.html cosette-chichirau.html razvan-toma-stanciulescu.html cristina-toma-cochinescu.html ingeborg-mihalik.html diana-buhas.html ilie-bodale.html silviu-ispas.html"
+PAGES="index.html statut.html contact.html echilibru-stat-privat.html viitor-copii-tineri.html respectam-femeile.html siguranta-zilei-de-maine.html renastem-patriotismul-romanesc.html cosette-chichirau.html razvan-toma-stanciulescu.html cristina-toma-cochinescu.html ingeborg-mihalik.html diana-buhas.html ilie-bodale.html silviu-ispas.html multumim.html"
 
 for p in $PAGES; do
   [ -f "$p" ] || err "$p missing"

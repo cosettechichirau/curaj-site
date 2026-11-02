@@ -14,6 +14,7 @@ apare pe site în 1–2 minute.
 | `cosette-chichirau.html` … `silviu-ispas.html` | Paginile celor 7 membri ai echipei (fotografie, rol, biografie) |
 | `statut.html` | Statutul partidului, 18 capitole, cu buton de descărcare PDF |
 | `contact.html` | Formular de contact |
+| `multumim.html` | Pagina „Mulțumim” afișată după trimiterea formularului de înscriere |
 | `assets/style.css` | Tot stilul site-ului; culorile sunt definite la începutul fișierului |
 | `assets/statut.js` | Comutarea între capitolele statutului (fără JS se afișează tot statutul) |
 | `assets/statut.pdf` | Statutul în format PDF |
@@ -38,6 +39,8 @@ Site-ul fiind static, formularele trimit datele prin [Formspree](https://formspr
 3. În `index.html`, înlocuiește `YOUR_SIGNUP_FORM_ID` cu ID-ul formularului de înscriere.
 4. În `contact.html`, înlocuiește `YOUR_CONTACT_FORM_ID` cu ID-ul formularului de contact.
 5. Trimite un mesaj de test de pe site; prima trimitere îți cere să confirmi adresa de e-mail.
+
+După o înscriere reușită, Formspree redirecționează vizitatorul către `multumim.html` (câmpul ascuns `_next` din `index.html`). Dacă site-ul se mută pe un domeniu propriu, actualizează adresa din acel câmp.
 
 Până la pasul 3–4, apăsarea butonului de trimitere afișează o pagină de eroare Formspree.
 
