@@ -4,7 +4,7 @@
 
 **Goal:** Rebuild the three-page CURAJ party site as static HTML/CSS in this repo and publish it on GitHub Pages at `https://cosettechichirau.github.io/curaj-site/`.
 
-**Architecture:** Three hand-written HTML pages share one stylesheet and a common header/footer markup. The Statut page holds all 19 chapters in the HTML and a 30-line script toggles which is visible. Forms post to Formspree. A shell check script asserts structural invariants (all chapters present, every referenced asset exists, no links back to Wix).
+**Architecture:** Three hand-written HTML pages share one stylesheet and a common header/footer markup. The Statut page holds all 18 chapters in the HTML and a 30-line script toggles which is visible. Forms post to Formspree. A shell check script asserts structural invariants (all chapters present, every referenced asset exists, no links back to Wix).
 
 **Tech Stack:** HTML5, CSS (custom properties, grid, flex), vanilla JS, Google Fonts (Montserrat), Formspree, GitHub Pages, `gh` CLI.
 
@@ -20,7 +20,7 @@ Source material already downloaded to the session scratchpad
 
 ```
 index.html            home page
-statut.html           statute, 19 chapters + chapter switcher
+statut.html           statute, 18 chapters + chapter switcher
 contact.html          contact form
 assets/style.css      all styling, CSS variables at top
 assets/statut.js      chapter switcher (progressive enhancement)
@@ -238,7 +238,7 @@ done
 # no links back to Wix
 grep -lE 'wixsite\.com|wixstatic\.com|filesusr\.com' index.html statut.html contact.html assets/style.css 2>/dev/null && err "Wix URL still referenced"
 
-# statut has all 19 chapters, as both buttons and sections
+# statut has all 18 chapters, as both buttons and sections
 if [ -f statut.html ]; then
   n=$(grep -c 'class="chapter"' statut.html); [ "$n" -eq 19 ] || err "statut.html has $n chapter sections, expected 19"
   b=$(grep -c 'data-chapter=' statut.html);  [ "$b" -eq 19 ] || err "statut.html has $b chapter buttons, expected 19"

@@ -42,7 +42,7 @@ Sections in the same order as Wix:
 ### `statut.html`
 Title, "Actualizat conform Deciziei nr.1/20.10.2023 a Comitetului de
 Inițiativă", a "Descarcă în format PDF" button linking to
-`assets/statut.pdf`, then a two-column layout: chapter list (19 chapters,
+`assets/statut.pdf`, then a two-column layout: chapter list (18 chapters,
 Cap. I to Cap. XIV) on the left, the selected chapter's articles on the
 right. Clicking a chapter swaps the content (small vanilla JS, `assets/statut.js`);
 all chapters are in the HTML so the page works without JS and is searchable.
@@ -76,5 +76,5 @@ the Wix site itself, which stays untouched.
 ## Verification
 
 Open all three pages at the live GitHub Pages URL in the browser at desktop
-and phone widths; confirm every image, the PDF link and all 19 chapters
+and phone widths; confirm every image, the PDF link and all 18 chapters
 load; confirm each form has the right fields and posts to Formspree.

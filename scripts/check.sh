@@ -14,7 +14,7 @@ done
 # every local asset or page referenced from HTML/CSS must exist
 for p in $PAGES assets/style.css; do
   [ -f "$p" ] || continue
-  for ref in $(grep -oE '(src|href|url\()=?"?\(?[^"):]+\.(css|js|png|jpg|jpeg|svg|pdf|html)' "$p" | sed -E 's/^[a-z]+\(?=?"?\(?//' | grep -vE '^(https?:|//|#|mailto:)' | sort -u); do
+  for ref in $(grep -oE '(src|href|url\()=?"?\(?[^"):]+\.(css|js|png|jpg|jpeg|svg|pdf|html)' "$p" | sed -E "s/^[a-z]+\\(?=?[\"']?\\(?[\"']?//" | grep -vE '^(https?:|//|#|mailto:)' | sort -u); do
     case "$p" in assets/*) base="assets/$ref" ;; *) base="$ref" ;; esac
     [ -f "$base" ] || err "$p references missing $base"
   done
@@ -23,10 +23,10 @@ done
 # no links back to Wix
 if grep -lE 'wixsite\.com|wixstatic\.com|filesusr\.com' $PAGES assets/style.css assets/statut.js 2>/dev/null; then err "Wix URL still referenced"; fi
 
-# statut has all 19 chapters, as both buttons and sections
+# statut has all 18 chapters, as both buttons and sections
 if [ -f statut.html ]; then
-  n=$(grep -c 'class="chapter"' statut.html); [ "$n" -eq 19 ] || err "statut.html has $n chapter sections, expected 19"
-  b=$(grep -c 'data-chapter=' statut.html);  [ "$b" -eq 19 ] || err "statut.html has $b chapter buttons, expected 19"
+  n=$(grep -c '<article class="chapter' statut.html); [ "$n" -eq 18 ] || err "statut.html has $n chapter sections, expected 18"
+  b=$(grep -c 'data-chapter=' statut.html);  [ "$b" -eq 18 ] || err "statut.html has $b chapter buttons, expected 18"
   a=$(grep -oE '<h3>Art\. ?[0-9]+' statut.html | wc -l | tr -d ' '); [ "$a" -ge 95 ] || err "statut.html has only $a article headings, expected 99"
 fi
 
