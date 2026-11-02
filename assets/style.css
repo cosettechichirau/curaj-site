@@ -147,9 +147,9 @@ select { appearance: none; -webkit-appearance: none; background-image: url("data
 .article .back { margin-top: 40px; }
 
 /* ---------- statut ---------- */
-.statut-head { padding: 64px 0 24px; }
+.statut-head { padding-top: 64px; padding-bottom: 24px; }
 .statut-head p { color: var(--muted); margin-bottom: 24px; }
-.statut { display: grid; grid-template-columns: 300px 1fr; gap: 48px; padding: 32px 0 96px; align-items: start; }
+.statut { display: grid; grid-template-columns: 300px 1fr; gap: 48px; padding-top: 32px; padding-bottom: 96px; align-items: start; }
 .chapters { list-style: none; margin: 0; padding: 0; position: sticky; top: 92px; display: grid; gap: 6px; }
 .chapters button { width: 100%; text-align: left; background: #fff; border: 1px solid var(--line); border-radius: 3px; padding: 10px 14px; font: 500 .85rem/1.3 var(--font); color: var(--blue); cursor: pointer; }
 .chapters button:hover { background: var(--blue-light); }
@@ -163,7 +163,7 @@ select { appearance: none; -webkit-appearance: none; background-image: url("data
 .no-js .chapters { display: none; }
 
 /* ---------- contact ---------- */
-.contact { display: grid; grid-template-columns: 1fr 1.3fr; gap: 64px; align-items: start; padding: 96px 0; }
+.contact { display: grid; grid-template-columns: 1fr 1.3fr; gap: 64px; align-items: start; padding-top: 96px; padding-bottom: 96px; }
 .contact h1 { font-size: 2.4rem; margin-bottom: 12px; }
 .contact .party { color: var(--blue); font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; font-weight: 600; }
 .contact-form input, .contact-form textarea { border: 0; border-bottom: 1px solid var(--blue); border-radius: 0; padding: 8px 0; }
@@ -183,7 +183,7 @@ select { appearance: none; -webkit-appearance: none; background-image: url("data
   .values { grid-template-columns: 1fr; }
   .statut { grid-template-columns: 1fr; gap: 32px; }
   .chapters { position: static; }
-  .contact { grid-template-columns: 1fr; gap: 40px; padding: 64px 0; }
+  .contact { grid-template-columns: 1fr; gap: 40px; padding-top: 64px; padding-bottom: 64px; }
 }
 @media (max-width: 600px) {
   .site-header .wrap { height: 64px; }
